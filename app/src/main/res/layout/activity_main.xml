@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:visibility="visible"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textView_goal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginStart="108dp"
+        android:layout_marginTop="42dp"
+        android:layout_marginEnd="108dp"
+        android:layout_marginBottom="18dp"
+        android:fontFamily="sans-serif-smallcaps"
+        android:text="GOAL: 2.5l "
+        android:textSize="35sp"
+        app:layout_constraintBottom_toTopOf="@+id/textView_yourProgressToday"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView_yourProgressToday"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginStart="108dp"
+        android:layout_marginTop="96dp"
+        android:layout_marginEnd="108dp"
+        android:layout_marginBottom="37dp"
+        android:fontFamily="sans-serif-smallcaps"
+        android:text="your progress today:"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/progressBar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.375"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="@android:style/Widget.ProgressBar.Horizontal"
+        android:layout_width="250dp"
+        android:layout_height="34dp"
+        android:layout_marginStart="56dp"
+        android:layout_marginTop="156dp"
+        android:layout_marginEnd="56dp"
+        android:layout_marginBottom="530dp"
+        android:indeterminate="false"
+        android:max="2500"
+        android:progress="600"
+        android:progressTint="#78DCFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.509"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/textView_0mL"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="27dp"
+        android:layout_marginTop="166dp"
+        android:layout_marginEnd="23dp"
+        android:layout_marginBottom="546dp"
+        android:fontFamily="serif-monospace"
+        android:text="0mL"
+        android:textSize="17sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/progressBar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView_2500mL"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="169dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="546dp"
+        android:fontFamily="serif-monospace"
+        android:text="2500mL"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/progressBar"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView_waterConsumed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="38dp"
+        android:layout_marginEnd="194dp"
+        android:text="Water Consumed:"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/progressBar" />
+
+    <TextView
+        android:id="@+id/textView_waterToBeConsumed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="29dp"
+        android:layout_marginEnd="194dp"
+        android:text="Water To Be Consumed:"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_waterConsumed" />
+
+    <TextView
+        android:id="@+id/textView_percentageProgress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="35dp"
+        android:layout_marginEnd="194dp"
+        android:fontFamily="sans-serif-smallcaps"
+        android:text="Percentage Progress:"
+        android:textSize="17sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_waterToBeConsumed" />
+
+    <Button
+        android:id="@+id/button_DrankAGlass"
+        style="@style/Widget.AppCompat.Button"
+        android:layout_width="301dp"
+        android:layout_height="66dp"
+        android:layout_marginStart="56dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="55dp"
+        android:background="#8C9EFF"
+        android:backgroundTint="#1E88E5"
+        android:text="I Drank A Glass Of Water(250 mL)"
+        app:cornerRadius="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_percentageProgress" />
+
+    <ImageButton
+        android:id="@+id/imageButton_reminder"
+        android:layout_width="85dp"
+        android:layout_height="79dp"
+        android:layout_marginStart="106dp"
+        android:layout_marginTop="51dp"
+        android:layout_marginBottom="167dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_DrankAGlass"
+        app:srcCompat="@drawable/reminders_final"
+        tools:srcCompat="@drawable/reminders_final" />
+
+    <ImageButton
+        android:id="@+id/imageButton_intakeGraph"
+        android:layout_width="85dp"
+        android:layout_height="81dp"
+        android:layout_marginStart="47dp"
+        android:layout_marginTop="51dp"
+        android:layout_marginEnd="104dp"
+        android:layout_marginBottom="165dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageButton_reminder"
+        app:layout_constraintTop_toBottomOf="@+id/button_DrankAGlass"
+        app:srcCompat="@drawable/intake_final"
+        tools:srcCompat="@drawable/intake_final" />
+
+    <ImageButton
+        android:id="@+id/imageButton3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="88dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="87dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageButton_intakeGraph"
+        app:srcCompat="@drawable/why_stay_hydrated" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
